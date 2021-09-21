@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> henry </title>
+        <link href="/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <%- include('partials/navbar'); %>
+        </header>
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>this is henry</h1>
+<img src="pics/henry.jpg"  width="600">
+
+<p>About henry</p>
+
+
+<li>Name: <%= henryinfo.name %> </li>
+<li>Breed: <%= henryinfo.breed %> </li>
+<li>Age: <%= henryinfo.age %> </li>
+<li>Location: <%= henryinfo.location %> </li>
+<li>Fixed: <%= henryinfo.fixed ? "Yes" : "No" %> </li>
+<li> Litter Trained: <%= henryinfo["litter trained"] ? "Yes" : "No" %>
+
+<!-- {
+    name: 'henry',
+    id: '0001',
+    breed: 'unknown',
+    age: '1',
+    location: 'seattle',
+    fixed: true,
+    'litter trained': true
+  }, -->
+
+<%- include('partials/footer'); %>
+</body>
+</html>
+

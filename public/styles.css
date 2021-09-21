@@ -1,0 +1,97 @@
+body {
+    background-image: url("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-lavender-mist-solid-color-background.jpg");
+    
+  }
+
+
+h1{
+    color: rgba(113, 87, 226, 0.877);
+    font-family:  'Rubik', sans-serif;
+}
+
+figure{
+    style: inline;
+    
+        float: left;
+       
+        text-align: center;
+        font-style: italic;
+        font-size: smaller;
+        text-indent: 0;
+}
+
+figcaption{
+    style:inline
+}
+
+li{
+    color:rgb(184, 10, 169);
+    list-style-type: none;
+    
+}
+
+p{
+    color:rgb(10, 129, 184)
+}
+
+img{
+ display:inline-block
+}
+
+
+
+.navbar-fixed-top{
+    position: fixed;
+    display: inline-flex;
+    padding: 0px;
+    background-color: #b0e6a4b9;
+    border: 1px solid rgb(248, 165, 241);
+    color:rgba(248, 165, 241, 0);
+    font-size: xx-large;    
+  }
+
+nav > ul > li:hover{
+    background-color: rgb(230, 210, 235);
+}
+
+
+.navborder{
+    border: 1.5px solid rgb(248, 165, 241);
+
+}
+
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.listingborder {
+    border-style: solid;
+    border-color: rgb(111, 151, 103);
+    display:inline-block;
+    background-color: rgb(233, 240, 231);
+    text-overflow: ellipsis ;
+    height: 500px;
+    max-block-size: 500px;
+    
+}
+
+.listingborder:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.centered_10_percent {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.centered_25_percent {
+    margin-left: 25%;
+    margin-right: 25%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> mimimoi </title>
+        <link href="/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <%- include('partials/navbar'); %>
+        </header>
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>this is mimimoi</h1>
+<img src="pics/mimimoi.jpg"  width="600">
+
+<p>About mimimoi</p>
+
+
+<li>Name: <%= mimimoiinfo.name %> </li>
+<li>Breed: <%= mimimoiinfo.breed %> </li>
+<li>Age: <%= mimimoiinfo.age %> </li>
+<li>Location: <%= mimimoiinfo.location %> </li>
+<li>Fixed: <%= mimimoiinfo.fixed ? "Yes" : "No" %> </li>
+<li> Litter Trained: <%= mimimoiinfo["litter trained"] ? "Yes" : "No" %>
+
+<%- include('partials/footer'); %>
+</body>
+</html>

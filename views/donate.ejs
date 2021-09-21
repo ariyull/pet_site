@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> donate </title>
+        <link href="/styles.css" rel="stylesheet">
+    </head>
+    <header>
+        <%- include('partials/navbar'); %>
+    </header>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<input id="carrot" type="button" value="donate carrot" onclick="donate_carrot()" > </input> 
+<input id="hay" type="button" value="donate hay" onclick="donate_hay()" > </input> 
+<input id="stuffed_toy" type="button" value="donate stuffed toy" onclick="donate_stuffed_toy()" > </input> 
+
+
+<div id="donation_box"></div>
+
+<br>
+<br>
+<br> 
+
+<h1 id="thanks"> :) </h1> 
+<img id="brown_bunny" src="pics/Brown_Bunny.png" onclick="thanks()"  alt="" width="300" height="300"> 
+
+<%- include('partials/footer'); %>
+<script>
+
+const donation_box = document.getElementById('donation_box')
+const brown_bunny = document.getElementById('brown_bunny')
+const thanks = document.getElementById('thanks')
+
+const carrot_html_insert = '<img src="pics/carrot.png" alt="" width="100" height="100">'
+const hay_html_insert = '<img src="pics/hay.png" alt="" width="100" height="100">'
+const stuffed_toy_html_insert = '<img src="pics/stuffed_toy.png" alt="" width="100" height="100">'
+
+function donate_carrot(){
+    let insert_location = donation_box;
+    insert_location.insertAdjacentHTML('afterend', carrot_html_insert);
+    document.getElementById("thanks").innerHTML = "thanks for the carrot!"
+}
+function donate_hay(){
+    let insert_location = donation_box;
+    insert_location.insertAdjacentHTML('afterend', hay_html_insert);
+    document.getElementById("thanks").innerHTML = "thanks for the hay!"
+}
+function donate_stuffed_toy(){
+    let insert_location = donation_box;
+    insert_location.insertAdjacentHTML('afterend', stuffed_toy_html_insert);
+    document.getElementById("thanks").innerHTML = "thanks for the toy!"
+}
+
+
+</script>
+
+
+
+</body>
+</html>

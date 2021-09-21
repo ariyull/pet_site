@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> <%= buninfo.name %> </title>
+        <link href="/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <%- include('partials/navbar'); %>
+        </header>
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>this is <%= buninfo.name %></h1>
+<img src="/<%= buninfo.profile_picture_path %>"  width="600">
+
+<p>About <%= buninfo.name %></p>
+
+
+<li>Name: <%= buninfo.name %> </li>
+<li>Breed: <%= buninfo.breed %> </li>
+<li>Age: <%= buninfo.age %> </li>
+<li>Location: <%= buninfo.location %> </li>
+<li>Fixed: <%= buninfo.fixed ? "Yes" : "No" %> </li>
+<li> Litter Trained: <%= buninfo.litter_trained ? "Yes" : "No" %> </li> 
+<li>Description: <%= buninfo.description %> </li>
+
+
+
+
+<%- include('partials/footer'); %>
+</body>
+</html>
+

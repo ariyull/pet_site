@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="/styles.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    <div class = centered_25_percent> 
+
+
+
+    <header>
+        <%- include('partials/navbar'); %>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>Home</h1>
+    <nav></nav>
+    <p>
+        <a href="/upload">upload</a>
+    </p>
+
+
+
+
+
+    <h1>
+        Adoptions
+    </h1>
+
+
+    <figure id="p1">
+
+    </figure>
+
+    <figure>
+        <figcaption style="font-size: 40px;">most recent adoptable: <%=lastuploadpetname%> </figcaption>
+        <img src=<%=lastpic%> style= "display: block;  height:470px">
+    </figure>
+
+</div>
+
+<p></p>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class = centered_18_percent> 
+
+<h1> Available Rabbits: </h1>
+
+
+
+    <% for(var i=0; i<tableinfo.length; i++) { %>
+    <div class = 'listingborder' style="">
+        <a href = "/buns/<%= tableinfo[i].name %>" >
+        <img src=<%=  tableinfo[i].profile_picture_path %> style= "width:350px;  height:350px;">
+        </a>
+        
+        <a href = "/buns/<%= tableinfo[i].name %>" >
+        <li style="text-align: center;">
+            Name: <%= tableinfo[i].name %>
+        </li style="text-align: center;">
+        </a>
+        <li style="text-align: center;">
+            Breed: <%= tableinfo[i].breed %>
+        </li>
+        <li style="text-align: center;">
+            Age: <%= tableinfo[i].age %>
+        </li>
+        <li style="text-align: center;">
+            Location: <%= tableinfo[i].location %>
+        </li>
+        <li style="text-align: center;">
+            Fixed: <%= tableinfo[i].fixed ? "Yes" : "No" %>
+        </li>
+        <li style="text-align: center;">
+            Litter Trained: <%= tableinfo[i]["litter trained"] ? "Yes" : "No" %>
+        </li>
+        <li style="text-align: center;"> Description:</li>
+        <li style="color:rgb(5, 170, 47); text-align:center; word-wrap: normal; height:60px ; width:320px ; max-width: 500ch; overflow: hidden; text-overflow: ellipsis;   white-space: nowrap; ">
+            <%= tableinfo[i].description %>
+        </li>
+    </div> 
+    <% } %>
+
+
+
+
+</div>
+        <%- include('partials/footer'); %>
+    
+
+
+
+
+
+
+
+    <script>
+        // this is just an example of how to use document.querySelector 
+        document.querySelector("figcaption").style.backgroundColor = "lavender";
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
