@@ -1,4 +1,23 @@
 {
+  "name": "git-test",
+  "version": "1.0.0",
+  "description": "pet site",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ariyull/pet_site"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
   "dependencies": {
     "bootstrap": "^5.1.1",
     "bootstrap-icons": "^1.5.0",

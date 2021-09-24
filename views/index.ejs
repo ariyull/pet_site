@@ -2,119 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link href="/styles.css" rel="stylesheet">
-    
-
+    <link rel="stylesheet" href="/bootstrap.css">
 </head>
 
 <body>
+<div class="container">
+    <div class="col">
+        <header>
+            <%- include('partials/navbar'); %>
+        </header>
+    </div>
 
-    <div class = centered_25_percent> 
+    <div class="row">
+        <div class="row">
+            
+            <h1 style="margin-top:50px;">Home</h1>
 
+            <p> <a href="/upload">upload</a> </p>
 
+            <h1><strong>Adoptions: </strong></h1>
+        </div>
+    </div>
 
-    <header>
-        <%- include('partials/navbar'); %>
-    </header>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <h1>Home</h1>
-    <nav></nav>
-    <p>
-        <a href="/upload">upload</a>
-    </p>
-
-
-
-
-
-    <h1>
-        Adoptions
-    </h1>
-
-
-    <figure id="p1">
-
+<div class="row" style="background-color:rgb(217, 178, 224);">
+    <figure >
+        <h2 style="font-size: 40px; ">Newest adoptable: <%=lastuploadpetname%> </h2>
+        <img src=<%=lastpic%> style= "display: block;  height:470px" class="centered_25_percent">
     </figure>
-
-    <figure>
-        <figcaption style="font-size: 40px;">most recent adoptable: <%=lastuploadpetname%> </figcaption>
-        <img src=<%=lastpic%> style= "display: block;  height:470px">
-    </figure>
-
 </div>
 
-<p></p>
+<div class = "row"> 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1 class="text-center" style="margin-top:50px;"> Available Rabbits: </h1>
 
-    <div class = centered_18_percent> 
+    <div class="col">
 
-<h1> Available Rabbits: </h1>
+        <% for(var i=0; i<tableinfo.length; i++) { %>
+            <div class = 'listingborder' >
+                <a href = "/buns/<%= tableinfo[i].name %>" >
+                    <img src=<%=  tableinfo[i].profile_picture_path %> style= "width:350px;  height:350px;">
+                </a>
 
+                <a href = "/buns/<%= tableinfo[i].name %>" >
+                    <li style="text-align: center;">
+                        Name: <%= tableinfo[i].name %>
+                    </li style="text-align: center;">
+                </a>
+                    <li style="text-align: center;">
+                        Breed: <%= tableinfo[i].breed %>
+                    </li>
+                    <li style="text-align: center;">
+                        Age: <%= tableinfo[i].age %>
+                    </li>
+                    <li style="text-align: center;">
+                        Location: <%= tableinfo[i].location %>
+                    </li>
+                    <li style="text-align: center;">
+                        Fixed: <%= tableinfo[i].fixed ? "Yes" : "No" %>
+                    </li>
+                    <li style="text-align: center;">
+                        Litter Trained: <%= tableinfo[i]["litter trained"] ? "Yes" : "No" %>
+                    </li>
+                    <li style="text-align: center;"> Description:</li>
+                    <li style="color:rgb(5, 170, 47); text-align:center; word-wrap: normal; height:60px ; width:320px ; max-width: 500ch; overflow: hidden; text-overflow: ellipsis;   white-space: nowrap; ">
+                        <%= tableinfo[i].description %>
+                    </li>
+            </div> 
+        <% } %>
 
+    </div>
+</div>
 
-    <% for(var i=0; i<tableinfo.length; i++) { %>
-    <div class = 'listingborder' style="">
-        <a href = "/buns/<%= tableinfo[i].name %>" >
-        <img src=<%=  tableinfo[i].profile_picture_path %> style= "width:350px;  height:350px;">
-        </a>
-        
-        <a href = "/buns/<%= tableinfo[i].name %>" >
-        <li style="text-align: center;">
-            Name: <%= tableinfo[i].name %>
-        </li style="text-align: center;">
-        </a>
-        <li style="text-align: center;">
-            Breed: <%= tableinfo[i].breed %>
-        </li>
-        <li style="text-align: center;">
-            Age: <%= tableinfo[i].age %>
-        </li>
-        <li style="text-align: center;">
-            Location: <%= tableinfo[i].location %>
-        </li>
-        <li style="text-align: center;">
-            Fixed: <%= tableinfo[i].fixed ? "Yes" : "No" %>
-        </li>
-        <li style="text-align: center;">
-            Litter Trained: <%= tableinfo[i]["litter trained"] ? "Yes" : "No" %>
-        </li>
-        <li style="text-align: center;"> Description:</li>
-        <li style="color:rgb(5, 170, 47); text-align:center; word-wrap: normal; height:60px ; width:320px ; max-width: 500ch; overflow: hidden; text-overflow: ellipsis;   white-space: nowrap; ">
-            <%= tableinfo[i].description %>
-        </li>
-    </div> 
-    <% } %>
+<div class="row ">
+<%- include('partials/footer'); %>
+</div>
+
 
 
 
 
 </div>
-        <%- include('partials/footer'); %>
-    
 
-
-
-
-
-
-
-    <script>
-        // this is just an example of how to use document.querySelector 
-        document.querySelector("figcaption").style.backgroundColor = "lavender";
-
-    </script>
-
-
-
+<script>
+    // this is just an example of how to use document.querySelector 
+    document.querySelector("figcaption").style.backgroundColor = "lavender";
+</script>
 
 
 

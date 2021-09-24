@@ -45,7 +45,7 @@ img{
     display: inline-flex;
     padding: 0px;
     background-color: #b0e6a4b9;
-    border: 1px solid rgb(248, 165, 241);
+    border: 1px solid rgb(111, 151, 103);
     color:rgba(248, 165, 241, 0);
     font-size: xx-large;    
   }
@@ -56,7 +56,7 @@ nav > ul > li:hover{
 
 
 .navborder{
-    border: 1.5px solid rgb(248, 165, 241);
+    border: 1.5px solid rgb(111, 151, 103);
 
 }
 
@@ -76,8 +76,8 @@ nav > ul > li:hover{
     display:inline-block;
     background-color: rgb(233, 240, 231);
     text-overflow: ellipsis ;
-    height: 500px;
-    max-block-size: 500px;
+    height: 550px;
+    max-block-size: 550px;
     
 }
 

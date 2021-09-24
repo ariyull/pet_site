@@ -40,6 +40,8 @@ function imagesfoldernames() {
 app.use(express.static("public"));
 app.use(express.static("views"));
 app.use(express.static("pics"));
+app.use("/bootstrap.css", express.static("node_modules/bootstrap/dist/css/bootstrap.min.css"));
+app.use("/bootstrap.js", express.static("node_modules/bootstrap/dist/js/bootstrap.min.js"));
 app.use("/public/images", express.static(path.join(__dirname, imageDir)));
 app.use(express.urlencoded());
 app.use(express.json());
